@@ -4,6 +4,8 @@
   "description": "useReducer hook with persistence in storage",
   "main": "build/index.js",
   "scripts": {
+    "build": "./node_modules/.bin/babel src/ --out-dir build",
+    "clean": "./node_modules/.bin/rimraf build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,15 +13,33 @@
     "url": "git+https://github.com/khakestani/use-persisted-reducer.git"
   },
   "keywords": [
-    "react",
+    "React",
     "useReducer",
     "persisted",
-    "localStorage"
+    "localStorage",
+    "storage",
+    "persisted state",
+    "state",
+    "dispatch",
+    "reducer"
   ],
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.7.4",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "rimraf": "^2.4.4"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
   "author": "Vahid Khakestani",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/khakestani/use-persisted-reducer/issues"
   },
-  "homepage": "https://github.com/khakestani/use-persisted-reducer#readme"
+  "homepage": "https://github.com/khakestani/use-persisted-reducer#readme",
+  "dependencies": {}
 }
