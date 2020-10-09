@@ -1,0 +1,25 @@
+{
+  "name": "use-persisted-reducer",
+  "version": "1.0.0",
+  "description": "useReducer hook with persistence in storage",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khakestani/use-persisted-reducer.git"
+  },
+  "keywords": [
+    "react",
+    "useReducer",
+    "persisted",
+    "localStorage"
+  ],
+  "author": "Vahid Khakestani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/khakestani/use-persisted-reducer/issues"
+  },
+  "homepage": "https://github.com/khakestani/use-persisted-reducer#readme"
+}
