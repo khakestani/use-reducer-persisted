@@ -6,7 +6,6 @@ import storageObject from "./storage";
 
 const usePersistedReducer = (key, reducer, init, _storage = "local", options) => {
   const { step = 1000, ...cookieOption } = options || {};
-  console.log("usePersistedReducer -> cookieOption", cookieOption);
   const interval = useRef();
   let storage;
   try {
@@ -21,12 +20,10 @@ const usePersistedReducer = (key, reducer, init, _storage = "local", options) =>
         storage = new Cookies();
         break;
     }
-  } catch (e) {}
+  } catch (err) {}
 
   const [state, dispatch] = useReducer(middleware(reducer), null, () => {
-    const d = storageObject.get(key, init, storage);
-    console.log("usePersistedReducer -> d", d);
-    return d;
+    return storageObject.get(key, init, storage);
   });
   const stateRef = useRef(state);
 
