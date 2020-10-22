@@ -1,20 +1,31 @@
+import Cookies from "universal-cookie";
+
 const storage = {
-  get: (key, initialValue, init) => {
+  get: (key, init, storage) => {
+    console.log("init", init);
+    const isCookie = storage instanceof Cookies;
     try {
-      const storageData = localStorage.getItem(key);
-      return !!storageData
-        ? JSON.parse(storageData)
-        : !!init && init instanceof Function
-        ? init()
-        : !!initialValue
-        ? initialValue
-        : {};
+      const storageData = isCookie ? storage.get(key, true) : storage.getItem(key);
+      console.log("storageData", storageData);
+      if (typeof storageData !== "undefined" && !!storageData) {
+        return isCookie ? storageData : JSON.parse(storageData);
+      } else if (typeof init === "function") {
+        return init();
+      } else if (typeof init !== "undefined") {
+        return init;
+      } else {
+        return {};
+      }
     } catch (e) {
-      return initialValue;
+      console.log("Error --> Getting storage data : ", e);
+      return init;
     }
   },
-  set: (key, value) => {
-    localStorage.setItem(key, JSON.stringify(value));
+  set: (key, value, storage, options) => {
+    console.log("value", value);
+    storage instanceof Cookies
+      ? storage.set(key, value, !!options ? options : null)
+      : storage.setItem(key, JSON.stringify(value));
   },
 };
 
