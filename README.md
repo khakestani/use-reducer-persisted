@@ -2,8 +2,15 @@
 
 Easily Persist your state created by useReducer into localStorage and sync it accross multi tab/window
 
-### Requirement
+## Features :boom::fire:
+<h3>1- Three different storage</h3> Store your state in 3 different storage such as
 
+- localStorage
+- sessionStorage
+- cookie :flushed:
+<h3>2- Synced State :</h3> Your state will be synced at all Window/Tap for a same browser ( even in cookie ) 
+
+## Requirement
 To use `use-persisted-reducer`, you must use `react@16.8.0` or greater which includes Hooks.
 
 <h2>Using</h2>
@@ -17,8 +24,16 @@ import usePersistedReducer from 'use-persisted-reducer';
 And then easily use it like useReducer , Just add a key as the first function parameter, The other parameters are exactly like useReducer.
 
 ```javascript
-const [state, dispatch] = usePersistedReducer('key', reducer, initialState, init);
+const [state, dispatch] = usePersistedReducer(key, reducer, init, storage, options);
 ```
+****key :**** your storage key  like "userInfo" ( Required )  
+****reducer :**** your reducer ( Required )  
+****init :**** your initial state as value or callback function  
+****storage :**** specify storage type as string ( `"local"` for localStorage, `"session"` for sessionStorage , `"cookie"` for cookie )  
+***oprions :*** all aoptions for your cookie and syncing time interval for cookie :  
+  - step : interval time in milisecond for syncing state from cookie on other tab/window
+  - other option of cookie based on ["universal-cookie"](https://www.npmjs.com/package/universal-cookie)
+
 
 
 
