@@ -21,7 +21,7 @@ first import it
 import usePersistedReducer from 'use-persisted-reducer';
 ```
 
-And then easily use it like useReducer , Just add a key as the first function parameter, The other parameters are exactly like useReducer.
+And then easily use it like useReducer , Just some more arguments :smile:
 
 ```javascript
 const [state, dispatch] = usePersistedReducer(key, reducer, init, storage, options);
@@ -30,7 +30,7 @@ const [state, dispatch] = usePersistedReducer(key, reducer, init, storage, optio
 ****reducer :**** your reducer ( Required )  
 ****init :**** your initial state as value or callback function  
 ****storage :**** specify storage type as string ( `"local"` for localStorage, `"session"` for sessionStorage , `"cookie"` for cookie )  
-***oprions :*** all aoptions for your cookie and syncing time interval for cookie :  
+***options :*** all options for your cookie and syncing time interval for cookie :  
   - step : interval time in milisecond for syncing state from cookie on other tab/window
   - other option of cookie based on ["universal-cookie"](https://www.npmjs.com/package/universal-cookie)
 
