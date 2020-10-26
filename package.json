@@ -1,10 +1,10 @@
 {
-  "name": "use-persisted-reducer",
+  "name": "use-reducer-persisted",
   "version": "1.1.0",
   "description": "useReducer hook with persistence in storage",
-  "main": "build/use-persisted-reducer.js",
-  "umd:main": "build/use-persisted-reducer.umd.js",
-  "module": "build/use-persisted-reducer.m.js",
+  "main": "build/use-reducer-persisted.js",
+  "umd:main": "build/use-reducer-persisted.umd.js",
+  "module": "build/use-reducer-persisted.m.js",
   "source": "src/index.js",
   "scripts": {
     "start": "better-npm-run dev-server",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khakestani/use-persisted-reducer.git"
+    "url": "git+https://github.com/khakestani/use-reducer-persisted.git"
   },
   "keywords": [
     "React",
@@ -60,9 +60,9 @@
   "author": "Vahid Khakestani",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/khakestani/use-persisted-reducer/issues"
+    "url": "https://github.com/khakestani/use-reducer-persisted/issues"
   },
-  "homepage": "https://github.com/khakestani/use-persisted-reducer#readme",
+  "homepage": "https://github.com/khakestani/use-reducer-persisted#readme",
   "dependencies": {
     "babel-loader": "^8.1.0",
     "universal-cookie": "^4.0.4"

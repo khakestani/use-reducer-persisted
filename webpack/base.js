@@ -35,7 +35,7 @@ module.exports = {
         "<html>" +
         " <head>" +
         '   <meta charset="utf-8">' +
-        "   <title>Use Persisted Reducer</title>" +
+        "   <title>Use Reducer Persisted</title>" +
         '   <meta name="viewport" content="width=device-width, initial-scale=1">' +
         " </head>" +
         " <body>" +

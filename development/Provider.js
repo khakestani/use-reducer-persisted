@@ -1,11 +1,11 @@
 import React, { createContext } from "react";
-import usePersistedReducer from "../src";
+import useReducerPersisted from "../src";
 
 export const StateContext = createContext([]);
 export const DispatchContext = createContext();
 
 export const Provider = ({ children }) => {
-  const [state, dispatch] = usePersistedReducer("@todos", redcer, [], "cookie");
+  const [state, dispatch] = useReducerPersisted("@todos", redcer, [], "cookie");
 
   return (
     <StateContext.Provider value={state}>

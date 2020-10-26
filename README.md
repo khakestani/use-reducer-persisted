@@ -1,4 +1,4 @@
-# use-persisted-reducer
+# use-reducer-persisted
 
 Easily Persist your state created by useReducer into localStorage and sync it accross multi tab/window
 
@@ -11,20 +11,20 @@ Easily Persist your state created by useReducer into localStorage and sync it ac
 <h3>2- Synced State :</h3> Your state will be synced at all Window/Tap for a same browser ( even in cookie ) 
 
 ## Requirement
-To use `use-persisted-reducer`, you must use `react@16.8.0` or greater which includes Hooks.
+To use `use-reducer-persisted`, you must use `react@16.8.0` or greater which includes Hooks.
 
 <h2>Using</h2>
 
 first import it
 
 ```javascript
-import usePersistedReducer from 'use-persisted-reducer';
+import useReducerPersisted from 'use-reducer-persisted';
 ```
 
 And then easily use it like useReducer , Just some more arguments :smile:
 
 ```javascript
-const [state, dispatch] = usePersistedReducer(key, reducer, init, storage, options);
+const [state, dispatch] = useReducerPersisted(key, reducer, init, storage, options);
 ```
 ****key :**** your storage key  like "userInfo" ( Required )  
 ****reducer :**** your reducer ( Required )  
@@ -40,11 +40,11 @@ const [state, dispatch] = usePersistedReducer(key, reducer, init, storage, optio
 <h2> Example </h2>
 
 ```javascript
-import usePersistedReducer from 'use-persisted-reducer';
+import useReducerPersisted from 'use-reducer-persisted';
 import reducer from './path/to/yourReducer';
 
 function Counter() {
-  const [state, dispatch] = usePersistedReducer('counter', reducer, initialState);
+  const [state, dispatch] = useReducerPersisted('counter', reducer, initialState);
   return (
     <>
       Count: {state.count}
@@ -62,4 +62,4 @@ function Counter() {
 - Even when you close the window completely and open it again your state is persisted
 
 ### Licence 
- [MIT](https://github.com/khakestani/use-persisted-reducer/blob/main/LICENSE) Licensed
+ [MIT](https://github.com/khakestani/use-reducer-persisted/blob/main/LICENSE) Licensed

@@ -4,7 +4,7 @@ import SET_FULL_STATE from "./constant";
 import middleware from "./middleware";
 import storageObject from "./storage";
 
-const usePersistedReducer = (key, reducer, init, _storage = "local", options) => {
+const useReducerPersisted = (key, reducer, init, _storage = "local", options) => {
   const { step = 1000, ...cookieOption } = options || {};
   const interval = useRef();
   let storage;
@@ -54,4 +54,4 @@ const usePersistedReducer = (key, reducer, init, _storage = "local", options) =>
   return [state, dispatch];
 };
 
-export default usePersistedReducer;
+export default useReducerPersisted;
