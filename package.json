@@ -1,6 +1,6 @@
 {
   "name": "use-reducer-persisted",
-  "version": "1.1.0",
+  "version": "1.2.1",
   "description": "useReducer hook with persistence in storage",
   "main": "build/use-reducer-persisted.js",
   "umd:main": "build/use-reducer-persisted.umd.js",
@@ -55,7 +55,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": "^16.8.0 || ^17.0.0"
   },
   "author": "Vahid Khakestani",
   "license": "MIT",
